@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB9314AD195624E50060B5FD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9314AC195624E50060B5FD /* main.swift */; };
+		DB9314AF195624E50060B5FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9314AE195624E50060B5FD /* AppDelegate.swift */; };
+		DB9314B1195624E50060B5FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9314B0195624E50060B5FD /* Images.xcassets */; };
+		DB9314B4195624E50060B5FD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9314B2195624E50060B5FD /* MainMenu.xib */; };
+		DB9314C0195624E50060B5FD /* EmojiMenuBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9314BF195624E50060B5FD /* EmojiMenuBarTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB9314BA195624E50060B5FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB93149F195624E50060B5FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB9314A6195624E50060B5FD;
+			remoteInfo = EmojiMenuBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB9314A7195624E50060B5FD /* EmojiMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB9314AB195624E50060B5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB9314AC195624E50060B5FD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DB9314AE195624E50060B5FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB9314B0195624E50060B5FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DB9314B3195624E50060B5FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DB9314B9195624E50060B5FD /* EmojiMenuBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojiMenuBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB9314BE195624E50060B5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB9314BF195624E50060B5FD /* EmojiMenuBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMenuBarTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB9314A4195624E50060B5FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB9314B6195624E50060B5FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB93149E195624E50060B5FD = {
+			isa = PBXGroup;
+			children = (
+				DB9314A9195624E50060B5FD /* EmojiMenuBar */,
+				DB9314BC195624E50060B5FD /* EmojiMenuBarTests */,
+				DB9314A8195624E50060B5FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB9314A8195624E50060B5FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB9314A7195624E50060B5FD /* EmojiMenuBar.app */,
+				DB9314B9195624E50060B5FD /* EmojiMenuBarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB9314A9195624E50060B5FD /* EmojiMenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				DB9314AE195624E50060B5FD /* AppDelegate.swift */,
+				DB9314B0195624E50060B5FD /* Images.xcassets */,
+				DB9314B2195624E50060B5FD /* MainMenu.xib */,
+				DB9314AA195624E50060B5FD /* Supporting Files */,
+			);
+			path = EmojiMenuBar;
+			sourceTree = "<group>";
+		};
+		DB9314AA195624E50060B5FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB9314AB195624E50060B5FD /* Info.plist */,
+				DB9314AC195624E50060B5FD /* main.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB9314BC195624E50060B5FD /* EmojiMenuBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB9314BF195624E50060B5FD /* EmojiMenuBarTests.swift */,
+				DB9314BD195624E50060B5FD /* Supporting Files */,
+			);
+			path = EmojiMenuBarTests;
+			sourceTree = "<group>";
+		};
+		DB9314BD195624E50060B5FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB9314BE195624E50060B5FD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB9314A6195624E50060B5FD /* EmojiMenuBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB9314C3195624E50060B5FD /* Build configuration list for PBXNativeTarget "EmojiMenuBar" */;
+			buildPhases = (
+				DB9314A3195624E50060B5FD /* Sources */,
+				DB9314A4195624E50060B5FD /* Frameworks */,
+				DB9314A5195624E50060B5FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmojiMenuBar;
+			productName = EmojiMenuBar;
+			productReference = DB9314A7195624E50060B5FD /* EmojiMenuBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB9314B8195624E50060B5FD /* EmojiMenuBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB9314C6195624E50060B5FD /* Build configuration list for PBXNativeTarget "EmojiMenuBarTests" */;
+			buildPhases = (
+				DB9314B5195624E50060B5FD /* Sources */,
+				DB9314B6195624E50060B5FD /* Frameworks */,
+				DB9314B7195624E50060B5FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB9314BB195624E50060B5FD /* PBXTargetDependency */,
+			);
+			name = EmojiMenuBarTests;
+			productName = EmojiMenuBarTests;
+			productReference = DB9314B9195624E50060B5FD /* EmojiMenuBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB93149F195624E50060B5FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Artisan;
+				TargetAttributes = {
+					DB9314A6195624E50060B5FD = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					DB9314B8195624E50060B5FD = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = DB9314A6195624E50060B5FD;
+					};
+				};
+			};
+			buildConfigurationList = DB9314A2195624E50060B5FD /* Build configuration list for PBXProject "EmojiMenuBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB93149E195624E50060B5FD;
+			productRefGroup = DB9314A8195624E50060B5FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB9314A6195624E50060B5FD /* EmojiMenuBar */,
+				DB9314B8195624E50060B5FD /* EmojiMenuBarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB9314A5195624E50060B5FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB9314B1195624E50060B5FD /* Images.xcassets in Resources */,
+				DB9314B4195624E50060B5FD /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB9314B7195624E50060B5FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB9314A3195624E50060B5FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB9314AF195624E50060B5FD /* AppDelegate.swift in Sources */,
+				DB9314AD195624E50060B5FD /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB9314B5195624E50060B5FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB9314C0195624E50060B5FD /* EmojiMenuBarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB9314BB195624E50060B5FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB9314A6195624E50060B5FD /* EmojiMenuBar */;
+			targetProxy = DB9314BA195624E50060B5FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB9314B2195624E50060B5FD /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB9314B3195624E50060B5FD /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB9314C1195624E50060B5FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB9314C2195624E50060B5FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DB9314C4195624E50060B5FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EmojiMenuBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DB9314C5195624E50060B5FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EmojiMenuBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DB9314C7195624E50060B5FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EmojiMenuBar.app/Contents/MacOS/EmojiMenuBar";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmojiMenuBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		DB9314C8195624E50060B5FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EmojiMenuBar.app/Contents/MacOS/EmojiMenuBar";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmojiMenuBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB9314A2195624E50060B5FD /* Build configuration list for PBXProject "EmojiMenuBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB9314C1195624E50060B5FD /* Debug */,
+				DB9314C2195624E50060B5FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB9314C3195624E50060B5FD /* Build configuration list for PBXNativeTarget "EmojiMenuBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB9314C4195624E50060B5FD /* Debug */,
+				DB9314C5195624E50060B5FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DB9314C6195624E50060B5FD /* Build configuration list for PBXNativeTarget "EmojiMenuBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB9314C7195624E50060B5FD /* Debug */,
+				DB9314C8195624E50060B5FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB93149F195624E50060B5FD /* Project object */;
+}
