@@ -12,6 +12,8 @@
 		DB9314B1195624E50060B5FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9314B0195624E50060B5FD /* Images.xcassets */; };
 		DB9314B4195624E50060B5FD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9314B2195624E50060B5FD /* MainMenu.xib */; };
 		DB9314C0195624E50060B5FD /* EmojiMenuBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9314BF195624E50060B5FD /* EmojiMenuBarTests.swift */; };
+		DB9314CC19562FC00060B5FD /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = DB9314CB19562FC00060B5FD /* Icon.icns */; };
+		DB9314D0195639FA0060B5FD /* EMPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9314CF195639FA0060B5FD /* EMPopoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		DB9314B9195624E50060B5FD /* EmojiMenuBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojiMenuBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9314BE195624E50060B5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB9314BF195624E50060B5FD /* EmojiMenuBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMenuBarTests.swift; sourceTree = "<group>"; };
+		DB9314CB19562FC00060B5FD /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		DB9314CF195639FA0060B5FD /* EMPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMPopoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				DB9314AE195624E50060B5FD /* AppDelegate.swift */,
-				DB9314B0195624E50060B5FD /* Images.xcassets */,
+				DB9314CF195639FA0060B5FD /* EMPopoverViewController.swift */,
 				DB9314B2195624E50060B5FD /* MainMenu.xib */,
+				DB9314CB19562FC00060B5FD /* Icon.icns */,
+				DB9314B0195624E50060B5FD /* Images.xcassets */,
 				DB9314AA195624E50060B5FD /* Supporting Files */,
 			);
 			path = EmojiMenuBar;
@@ -158,6 +164,7 @@
 				TargetAttributes = {
 					DB9314A6195624E50060B5FD = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = SJ3G36B276;
 					};
 					DB9314B8195624E50060B5FD = {
 						CreatedOnToolsVersion = 6.0;
@@ -189,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9314CC19562FC00060B5FD /* Icon.icns in Resources */,
 				DB9314B1195624E50060B5FD /* Images.xcassets in Resources */,
 				DB9314B4195624E50060B5FD /* MainMenu.xib in Resources */,
 			);
@@ -208,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9314D0195639FA0060B5FD /* EMPopoverViewController.swift in Sources */,
 				DB9314AF195624E50060B5FD /* AppDelegate.swift in Sources */,
 				DB9314AD195624E50060B5FD /* main.swift in Sources */,
 			);
