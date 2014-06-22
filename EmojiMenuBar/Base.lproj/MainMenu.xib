@@ -27,7 +27,7 @@
                 <outlet property="contentViewController" destination="nnL-W9-J7q" id="DXB-Ba-KuT"/>
             </connections>
         </popover>
-        <customView id="Sh6-nY-KXK">
+        <customView id="Sh6-nY-KXK" userLabel="Popover View">
             <rect key="frame" x="0.0" y="0.0" width="283" height="125"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <point key="canvasLocation" x="261.5" y="285.5"/>
