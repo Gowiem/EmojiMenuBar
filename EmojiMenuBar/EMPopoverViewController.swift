@@ -8,15 +8,15 @@
 
 import Cocoa
 
-class EMPopoverViewController: NSViewController {
-
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        // Initialization code here.
-    }
+class EMPopoverViewController: NSViewController, NSCollectionViewDelegate {
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
+        NSLog("--- PopoverVC init w/ coder ")
         super.init(coder: aDecoder)
     }
-
+    
+    override init() {
+        NSLog("--- PopoverVC normal init")
+        super.init()
+    }
 }

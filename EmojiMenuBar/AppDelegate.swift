@@ -10,15 +10,24 @@ import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     
-    @IBOutlet var mainPopover: NSPopover
+    @IBOutlet var mainPopover: NSPopover!
+    
+    var popoverViewController: EMPopoverViewController!
     
     var statusItem: NSStatusItem?
+    var hipchatEmoticons: [EMEmoticonModel]
+    var testImage: NSImage?
+    
+    override init() {
+        NSLog("AppDelegate init!")
+        hipchatEmoticons = AppDelegate.buildHipchatEmoticons()
+        super.init()
+    }
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
         let bar = NSStatusBar.systemStatusBar()
-        
-        statusItem = bar.statusItemWithLength(CGFloat(NSVariableStatusItemLength))
+        statusItem = bar.statusItemWithLength(-1)
         statusItem!.title = nil
         statusItem!.highlightMode = true
         statusItem!.action = "showPopover:"
@@ -27,12 +36,26 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         icon.size = NSSize(width: 16, height: 16)
         icon.setTemplate(true)
         statusItem!.image = icon
+        
+        NSLog("didFinishLaunching - hipchatEmoticons: \(hipchatEmoticons)")
     }
     
     func showPopover(sender: AnyObject) {
         // Need to downcast our sender as a view since it's a private class (NSStatusBarButton)
         let statusBarButton = sender as NSView
         mainPopover.showRelativeToRect(NSZeroRect, ofView: statusBarButton, preferredEdge: NSRectEdge.min)
+    }
+    
+    class func buildHipchatEmoticons() -> [EMEmoticonModel] {
+        if let resourcePath = NSBundle.mainBundle().resourcePath {
+            let hipchatIconsPath = resourcePath.stringByAppendingPathComponent("hipchat-emoticons")
+            var contents: [String] = NSFileManager.defaultManager().contentsOfDirectoryAtPath(hipchatIconsPath, error: nil) as [String]
+            //        NSLog("flattened: \(contents.map({ EMEmoticonModel.instanceOrNil($0) }).filter({ $0 != nil }).map({ $0! }))")
+            //        contents = contents[1...5]
+            return contents.map({ EMEmoticonModel.instanceOrNil($0) }).filter({ $0 != nil }).map({ $0! })
+        } else {
+            return Array()
+        }
     }
 }
 
