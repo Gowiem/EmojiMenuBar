@@ -17,7 +17,7 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <popover behavior="t" id="cCL-2K-zWm">
+        <popover id="cCL-2K-zWm">
             <connections>
                 <outlet property="contentViewController" destination="c0a-4Y-OKN" id="lz5-hV-yRM"/>
             </connections>

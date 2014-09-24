@@ -18,6 +18,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     var hipchatEmoticons: [EMEmoticonModel]
     var testImage: NSImage?
     
+    var popoverTransiencyMonitor: NSEvent?
+    
     override init() {
         NSLog("AppDelegate init!")
         hipchatEmoticons = AppDelegate.buildHipchatEmoticons()
@@ -44,6 +46,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         // Need to downcast our sender as a view since it's a private class (NSStatusBarButton)
         let statusBarButton = sender as NSView
         mainPopover.showRelativeToRect(NSZeroRect, ofView: statusBarButton, preferredEdge: NSRectEdge.min)
+        
+        
+        if (self.popoverTransiencyMonitor == nil) {
+            NSEvent.addGlobalMonitorForEventsMatchingMask((NSEventMask.LeftMouseDownMask |
+                NSEventMask.RightMouseDownMask | NSEventMask.KeyUpMask), handler: handleClickOffEvent)
+        }
+    }
+    
+    func handleClickOffEvent(aEvent: (NSEvent!)) -> Void {
+        // Remove the monitor and set it to nil so we set it again when the user clicks the menu item.
+        NSEvent.removeMonitor(self.popoverTransiencyMonitor)
+        self.popoverTransiencyMonitor = nil
+        
+        // Close our popover
+        self.mainPopover.close()
     }
     
     class func buildHipchatEmoticons() -> [EMEmoticonModel] {
