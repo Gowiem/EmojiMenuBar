@@ -9,6 +9,8 @@
 import Cocoa
 
 class EMCollectionViewItem: NSCollectionViewItem {
-
-
+    
+    required init(coder: NSCoder!) {
+        super.init(coder: coder)
+    }
 }

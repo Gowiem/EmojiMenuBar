@@ -29,9 +29,20 @@ class EMEmoticonModel: NSObject {
         if filename.contains(".") && !filename.contains(".gif") {
             return EMEmoticonModel(filename: filename)
         } else {
-            NSLog("Skipping filename: \(filename)")
+            //NSLog("Skipping filename: \(filename)")
             return nil
         }
+    }
+    
+    func clipboardRepresentation() -> String {
+        return "(\(self.name))"
+    }
+    
+    // Add the model's name to the clipboard
+    func copyToUsersClipboard() {
+        let pasteBoard = NSPasteboard.generalPasteboard()
+        pasteBoard.clearContents()
+        pasteBoard.setString(self.clipboardRepresentation(), forType: NSStringPboardType)
     }
     
     func description() -> String {

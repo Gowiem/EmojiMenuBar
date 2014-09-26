@@ -21,10 +21,7 @@ class EMCollectionView : NSCollectionView {
     }
     
     override func newItemForRepresentedObject(object: AnyObject!) -> NSCollectionViewItem! {
-        NSLog("newItem! - object: \(object)")
         var item = super.newItemForRepresentedObject(object);
-        
-        
         return item;
     }
     

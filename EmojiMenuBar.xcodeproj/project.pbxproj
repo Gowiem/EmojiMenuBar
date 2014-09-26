@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB27869219D4FF0B00AE9A56 /* EMCollectionViewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27869119D4FF0B00AE9A56 /* EMCollectionViewItemView.swift */; };
 		DB9314AD195624E50060B5FD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9314AC195624E50060B5FD /* main.swift */; };
 		DB9314AF195624E50060B5FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9314AE195624E50060B5FD /* AppDelegate.swift */; };
 		DB9314B1195624E50060B5FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9314B0195624E50060B5FD /* Images.xcassets */; };
@@ -206,6 +207,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB27869119D4FF0B00AE9A56 /* EMCollectionViewItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMCollectionViewItemView.swift; sourceTree = "<group>"; };
 		DB9314A7195624E50060B5FD /* EmojiMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9314AB195624E50060B5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB9314AC195624E50060B5FD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 				DB9314AE195624E50060B5FD /* AppDelegate.swift */,
 				DB9314CF195639FA0060B5FD /* EMPopoverViewController.swift */,
 				DBF2769D1974D20C004EDA97 /* EMCollectionViewItem.swift */,
+				DB27869119D4FF0B00AE9A56 /* EMCollectionViewItemView.swift */,
 				DB9314D319578BFB0060B5FD /* EMEmoticonModel.swift */,
 				DB9314B2195624E50060B5FD /* MainMenu.xib */,
 				DB9314CB19562FC00060B5FD /* Icon.icns */,
@@ -940,6 +943,7 @@
 				DB9314AF195624E50060B5FD /* AppDelegate.swift in Sources */,
 				DBF2769C1974CF3F004EDA97 /* EMCollectionView.swift in Sources */,
 				DB9314AD195624E50060B5FD /* main.swift in Sources */,
+				DB27869219D4FF0B00AE9A56 /* EMCollectionViewItemView.swift in Sources */,
 				DBF2769E1974D20C004EDA97 /* EMCollectionViewItem.swift in Sources */,
 				DB9316351957A7D50060B5FD /* EMUtils.swift in Sources */,
 				DB9314D419578BFB0060B5FD /* EMEmoticonModel.swift in Sources */,

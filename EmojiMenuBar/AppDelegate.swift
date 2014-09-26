@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     var popoverViewController: EMPopoverViewController!
     
     var statusItem: NSStatusItem?
-    var hipchatEmoticons: [EMEmoticonModel]
+    var hipchatEmoticons: NSArray
     var testImage: NSImage?
     
     var popoverTransiencyMonitor: NSEvent?

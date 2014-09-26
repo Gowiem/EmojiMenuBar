@@ -13,6 +13,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="EmojiMenuBar" customModuleProvider="target">
             <connections>
+                <outlet property="collectionScrollView" destination="P5a-VU-gwX" id="yZa-BS-H7w"/>
                 <outlet property="mainPopover" destination="cCL-2K-zWm" id="C5z-vV-nIi"/>
             </connections>
         </customObject>
@@ -23,16 +24,16 @@
             </connections>
         </popover>
         <customView id="Sh6-nY-KXK" userLabel="Popover View">
-            <rect key="frame" x="0.0" y="0.0" width="265" height="317"/>
+            <rect key="frame" x="0.0" y="0.0" width="517" height="316"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5a-VU-gwX">
-                    <rect key="frame" x="7" y="9" width="250" height="298"/>
+                <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="P5a-VU-gwX">
+                    <rect key="frame" x="3" y="-184" width="510" height="500"/>
                     <clipView key="contentView" ambiguous="YES" misplaced="YES" id="0Hj-s0-JHN">
                         <rect key="frame" x="1" y="1" width="248" height="158"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView ambiguous="YES" maxNumberOfRows="5" maxNumberOfColumns="5" id="Rkz-C9-Jhj" customClass="EMCollectionView" customModule="EmojiMenuBar" customModuleProvider="target">
+                            <collectionView ambiguous="YES" selectable="YES" maxNumberOfRows="3" maxNumberOfColumns="4" id="Rkz-C9-Jhj" customClass="EMCollectionView" customModule="EmojiMenuBar" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="248" height="158"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -42,32 +43,33 @@
                                 </connections>
                             </collectionView>
                         </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Jmh-c9-y4I">
                         <rect key="frame" x="1" y="144" width="233" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="kCA-og-usA">
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="kCA-og-usA">
                         <rect key="frame" x="234" y="1" width="15" height="143"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
             </subviews>
-            <point key="canvasLocation" x="252.5" y="381.5"/>
+            <point key="canvasLocation" x="378.5" y="381"/>
         </customView>
         <collectionViewItem title="My Collection View Item" id="9ch-xw-60B" customClass="EMCollectionViewItem" customModule="EmojiMenuBar" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="5AI-35-so3" id="ZkB-Qo-5f7"/>
             </connections>
         </collectionViewItem>
-        <view wantsLayer="YES" id="5AI-35-so3">
+        <view wantsLayer="YES" id="5AI-35-so3" customClass="EMCollectionViewItemView" customModule="EmojiMenuBar" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="63" height="88"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RK5-ZR-ORH">
                     <rect key="frame" x="0.0" y="0.0" width="63" height="20"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="name" id="s3Y-1D-gIq">
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="system" size="10"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -83,7 +85,7 @@
                     </connections>
                 </imageView>
             </subviews>
-            <point key="canvasLocation" x="500.5" y="308"/>
+            <point key="canvasLocation" x="52.5" y="267"/>
         </view>
         <viewController id="c0a-4Y-OKN" customClass="EMPopoverViewController" customModule="EmojiMenuBar" customModuleProvider="target">
             <connections>
