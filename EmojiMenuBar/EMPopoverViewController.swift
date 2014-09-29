@@ -11,12 +11,10 @@ import Cocoa
 class EMPopoverViewController: NSViewController, NSCollectionViewDelegate {
     
     required init(coder aDecoder: NSCoder!) {
-        NSLog("--- PopoverVC init w/ coder ")
         super.init(coder: aDecoder)
     }
     
     override init() {
-        NSLog("--- PopoverVC normal init")
         super.init()
     }
 }

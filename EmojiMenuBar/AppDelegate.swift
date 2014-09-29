@@ -9,7 +9,7 @@
 import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
-    
+
     @IBOutlet var mainPopover: NSPopover!
     
     var popoverViewController: EMPopoverViewController!
@@ -39,7 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         icon.setTemplate(true)
         statusItem!.image = icon
         
-        NSLog("didFinishLaunching - hipchatEmoticons: \(hipchatEmoticons)")
+        NSLog("didFinishLaunching - hipchatEmoticons.count: \(hipchatEmoticons.count)")
     }
     
     func showPopover(sender: AnyObject) {

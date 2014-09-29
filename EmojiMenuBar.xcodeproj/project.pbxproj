@@ -446,12 +446,12 @@
 				DBF2769D1974D20C004EDA97 /* EMCollectionViewItem.swift */,
 				DB27869119D4FF0B00AE9A56 /* EMCollectionViewItemView.swift */,
 				DB9314D319578BFB0060B5FD /* EMEmoticonModel.swift */,
+				DB9316341957A7D50060B5FD /* EMUtils.swift */,
 				DB9314B2195624E50060B5FD /* MainMenu.xib */,
 				DB9314CB19562FC00060B5FD /* Icon.icns */,
 				DB9314B0195624E50060B5FD /* Images.xcassets */,
 				DB9314D519578FF70060B5FD /* hipchat-emoticons */,
 				DB9314AA195624E50060B5FD /* Supporting Files */,
-				DB9316341957A7D50060B5FD /* EMUtils.swift */,
 			);
 			path = EmojiMenuBar;
 			sourceTree = "<group>";
