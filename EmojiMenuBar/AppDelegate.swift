@@ -34,10 +34,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         statusItem!.highlightMode = true
         statusItem!.action = "showPopover:"
         
-        let icon = NSImage(named: "Icon")
-        icon.size = NSSize(width: 16, height: 16)
-        icon.setTemplate(true)
-        statusItem!.image = icon
+        if let icon = NSImage(named: "Icon") {
+            icon.size = NSSize(width: 16, height: 16)
+            icon.setTemplate(true)
+            statusItem!.image = icon
+        }
         
         NSLog("didFinishLaunching - hipchatEmoticons.count: \(hipchatEmoticons.count)")
     }
@@ -56,7 +57,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     
     func handleClickOffEvent(aEvent: (NSEvent!)) -> Void {
         // Remove the monitor and set it to nil so we set it again when the user clicks the menu item.
-        NSEvent.removeMonitor(self.popoverTransiencyMonitor)
+        if let monitor = self.popoverTransiencyMonitor {
+            NSEvent.removeMonitor(monitor)
+        }
         self.popoverTransiencyMonitor = nil
         
         // Close our popover

@@ -13,7 +13,7 @@ class EMEmoticonModel: NSObject {
     var name: String
     var filename: String
     var fileExtension: String
-    var image: NSImage
+    var image: NSImage?
     
     
     init(filename: NSString) {
@@ -22,7 +22,9 @@ class EMEmoticonModel: NSObject {
         self.filename = filename
         self.fileExtension = components[1]
         let path = NSBundle.mainBundle().pathForResource(name, ofType: fileExtension)
-        self.image = NSImage(contentsOfFile: path)
+        if let newImage = NSImage(contentsOfFile: path!) {
+            self.image = newImage
+        }
     }
     
     class func instanceOrNil(filename: NSString) -> EMEmoticonModel? {
