@@ -8,11 +8,17 @@
 
 import Foundation
 
-class EMEmojiModel {
+class EMEmojiModel: NSObject {
     
     let modelJson: JSON
+    let name: String
     
     init(json:JSON) {
         self.modelJson = json;
+        if let theName = json["aliases"][0].asString {
+            self.name = theName
+        } else {
+            self.name = "No Name?"
+        }
     }
 }

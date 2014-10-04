@@ -88,6 +88,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             if let emojiArray = emojiJson.asArray {
                 result = emojiArray.map {
                     (singleJson: JSON) -> EMEmojiModel in
+                    NSLog("single json: \(singleJson)")
                     return EMEmojiModel(json: singleJson)
                 }
             }

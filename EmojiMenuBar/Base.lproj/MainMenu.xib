@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6249"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -17,7 +18,7 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <arrayController objectClassName="EMEmoticonModel" id="6bM-je-6vT">
+        <arrayController objectClassName="EMEmoticonModel" id="6bM-je-6vT" userLabel="HipChat Array Controller">
             <declaredKeys>
                 <string>name</string>
                 <string>image</string>
@@ -27,11 +28,14 @@
                 <binding destination="Voe-Tx-rLC" name="contentArray" keyPath="hipchatEmoticons" id="mYS-2E-bNQ"/>
             </connections>
         </arrayController>
-        <collectionViewItem title="My Collection View Item" id="9ch-xw-60B" customClass="EMCollectionViewItem" customModule="EmojiMenuBar" customModuleProvider="target">
+        <arrayController objectClassName="EMEmojiModel" id="A7Z-3F-k0b" userLabel="Emoji Array Controller">
+            <declaredKeys>
+                <string>name</string>
+            </declaredKeys>
             <connections>
-                <outlet property="view" destination="5AI-35-so3" id="ZkB-Qo-5f7"/>
+                <binding destination="Voe-Tx-rLC" name="contentArray" keyPath="emojis" id="HQL-JS-NHd"/>
             </connections>
-        </collectionViewItem>
+        </arrayController>
         <popover id="cCL-2K-zWm">
             <connections>
                 <outlet property="contentViewController" destination="c0a-4Y-OKN" id="lz5-hV-yRM"/>
@@ -69,11 +73,12 @@
                         <rect key="frame" x="1" y="1" width="248" height="158"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView id="eNs-qp-rOw">
+                            <collectionView id="eNs-qp-rOw" userLabel="Emoji Collection View">
                                 <rect key="frame" x="0.0" y="0.0" width="248" height="158"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
+                                    <binding destination="A7Z-3F-k0b" name="content" keyPath="arrangedObjects" id="wOP-PY-CY4"/>
                                     <outlet property="itemPrototype" destination="2kE-gv-9J3" id="Iqj-EZ-zXO"/>
                                 </connections>
                             </collectionView>
@@ -95,7 +100,7 @@
                         <rect key="frame" x="1" y="1" width="166" height="79"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView selectable="YES" id="vjc-yv-ixD" customClass="EMCollectionView" customModule="EmojiMenuBar" customModuleProvider="target">
+                            <collectionView selectable="YES" id="vjc-yv-ixD" userLabel="HipChat Collection View" customClass="EMCollectionView" customModule="EmojiMenuBar" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="354" height="221"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -118,7 +123,12 @@
             </subviews>
             <point key="canvasLocation" x="414.5" y="495"/>
         </customView>
-        <collectionViewItem id="2kE-gv-9J3">
+        <collectionViewItem title="My Collection View Item" id="9ch-xw-60B" userLabel="HipChat Collection View Item" customClass="EMCollectionViewItem" customModule="EmojiMenuBar" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="5AI-35-so3" id="ZkB-Qo-5f7"/>
+            </connections>
+        </collectionViewItem>
+        <collectionViewItem id="2kE-gv-9J3" userLabel="Emoji Collection View Item">
             <connections>
                 <outlet property="view" destination="1jm-bQ-Tbv" id="iXQ-7Z-Clh"/>
             </connections>
@@ -126,6 +136,20 @@
         <view id="1jm-bQ-Tbv" userLabel="Emoji View Item View">
             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="mYJ-1p-Itb">
+                    <rect key="frame" x="-2" y="0.0" width="104" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="name" id="b4B-6F-OXv">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.27572943239999997" green="0.27572943239999997" blue="0.27572943239999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="2kE-gv-9J3" name="value" keyPath="representedObject.name" id="EYg-iu-yUm"/>
+                    </connections>
+                </textField>
+            </subviews>
         </view>
         <view wantsLayer="YES" id="5AI-35-so3" userLabel="HipChat View Item View" customClass="EMCollectionViewItemView" customModule="EmojiMenuBar" customModuleProvider="target">
             <rect key="frame" x="0.0" y="1" width="100" height="79"/>
@@ -154,5 +178,13 @@
             </subviews>
             <point key="canvasLocation" x="71" y="261.5"/>
         </view>
+        <button verticalHuggingPriority="750" id="iJn-eP-iP6">
+            <rect key="frame" x="0.0" y="0.0" width="82" height="32"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LXn-aJ-pn7">
+                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <font key="font" metaFont="system"/>
+            </buttonCell>
+        </button>
     </objects>
 </document>
