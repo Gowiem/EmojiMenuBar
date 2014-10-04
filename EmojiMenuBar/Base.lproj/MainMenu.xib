@@ -17,48 +17,6 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <popover id="cCL-2K-zWm">
-            <connections>
-                <outlet property="contentViewController" destination="c0a-4Y-OKN" id="lz5-hV-yRM"/>
-            </connections>
-        </popover>
-        <collectionViewItem title="My Collection View Item" id="9ch-xw-60B" customClass="EMCollectionViewItem" customModule="EmojiMenuBar" customModuleProvider="target">
-            <connections>
-                <outlet property="view" destination="5AI-35-so3" id="ZkB-Qo-5f7"/>
-            </connections>
-        </collectionViewItem>
-        <view wantsLayer="YES" id="5AI-35-so3" customClass="EMCollectionViewItemView" customModule="EmojiMenuBar" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="1" width="100" height="79"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <subviews>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Eyb-SL-XHN">
-                    <rect key="frame" x="0.0" y="10" width="100" height="69"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Wj3-nT-zCJ"/>
-                    <connections>
-                        <binding destination="9ch-xw-60B" name="value" keyPath="representedObject.image" id="rgZ-IP-jL8"/>
-                    </connections>
-                </imageView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="RK5-ZR-ORH">
-                    <rect key="frame" x="-2" y="0.0" width="104" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="name" id="s3Y-1D-gIq">
-                        <font key="font" metaFont="system" size="10"/>
-                        <color key="textColor" red="0.27572943239795922" green="0.27572943239795922" blue="0.27572943239795922" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <binding destination="9ch-xw-60B" name="value" keyPath="representedObject.clipboardRepresentation" id="BLC-4c-e3C"/>
-                    </connections>
-                </textField>
-            </subviews>
-            <point key="canvasLocation" x="71" y="261.5"/>
-        </view>
-        <viewController id="c0a-4Y-OKN" customClass="EMPopoverViewController" customModule="EmojiMenuBar" customModuleProvider="target">
-            <connections>
-                <outlet property="view" destination="oQi-WG-nA9" id="o3t-WG-xdP"/>
-            </connections>
-        </viewController>
         <arrayController objectClassName="EMEmoticonModel" id="6bM-je-6vT">
             <declaredKeys>
                 <string>name</string>
@@ -69,12 +27,69 @@
                 <binding destination="Voe-Tx-rLC" name="contentArray" keyPath="hipchatEmoticons" id="mYS-2E-bNQ"/>
             </connections>
         </arrayController>
-        <customView id="oQi-WG-nA9">
-            <rect key="frame" x="0.0" y="0.0" width="415" height="329"/>
+        <collectionViewItem title="My Collection View Item" id="9ch-xw-60B" customClass="EMCollectionViewItem" customModule="EmojiMenuBar" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="5AI-35-so3" id="ZkB-Qo-5f7"/>
+            </connections>
+        </collectionViewItem>
+        <popover id="cCL-2K-zWm">
+            <connections>
+                <outlet property="contentViewController" destination="c0a-4Y-OKN" id="lz5-hV-yRM"/>
+            </connections>
+        </popover>
+        <viewController id="c0a-4Y-OKN" customClass="EMPopoverViewController" customModule="EmojiMenuBar" customModuleProvider="target">
+            <connections>
+                <outlet property="emojiScrollView" destination="MUW-nZ-qdy" id="Zc5-Od-Rnr"/>
+                <outlet property="hipchatScrollView" destination="I4p-e0-bZ4" id="jhL-mw-IXh"/>
+                <outlet property="view" destination="REU-hv-qTK" id="Spw-yY-iJf"/>
+            </connections>
+        </viewController>
+        <customView id="REU-hv-qTK" userLabel="Popover VC View">
+            <rect key="frame" x="0.0" y="-1" width="415" height="350"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" id="I4p-e0-bZ4">
-                    <rect key="frame" x="0.0" y="0.0" width="415" height="329"/>
+                <segmentedControl verticalHuggingPriority="750" id="FDE-7E-zRc" userLabel="Round Segmented Control">
+                    <rect key="frame" x="16" y="326" width="382" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="automatic" trackingMode="selectOne" id="LDp-no-PM1">
+                        <font key="font" metaFont="system"/>
+                        <segments>
+                            <segment label="HipChat Emoticons" width="188" selected="YES"/>
+                            <segment label="Emoji" width="187" tag="1"/>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="controlClicked:" target="c0a-4Y-OKN" id="Frc-db-fNZ"/>
+                    </connections>
+                </segmentedControl>
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="MUW-nZ-qdy" userLabel="Emoji Scroll View">
+                    <rect key="frame" x="0.0" y="0.0" width="415" height="325"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <clipView key="contentView" id="nRh-jT-jua">
+                        <rect key="frame" x="1" y="1" width="248" height="158"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView id="eNs-qp-rOw">
+                                <rect key="frame" x="0.0" y="0.0" width="248" height="158"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="itemPrototype" destination="2kE-gv-9J3" id="Iqj-EZ-zXO"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="hGw-eD-Zte">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="8e1-io-cXG">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" id="I4p-e0-bZ4" userLabel="HipChat Emoticons Scroll View">
+                    <rect key="frame" x="0.0" y="0.0" width="415" height="325"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <clipView key="contentView" id="Fn5-PJ-hUP">
                         <rect key="frame" x="1" y="1" width="166" height="79"/>
@@ -101,7 +116,43 @@
                     </scroller>
                 </scrollView>
             </subviews>
-            <point key="canvasLocation" x="363.5" y="392.5"/>
+            <point key="canvasLocation" x="414.5" y="495"/>
         </customView>
+        <collectionViewItem id="2kE-gv-9J3">
+            <connections>
+                <outlet property="view" destination="1jm-bQ-Tbv" id="iXQ-7Z-Clh"/>
+            </connections>
+        </collectionViewItem>
+        <view id="1jm-bQ-Tbv" userLabel="Emoji View Item View">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+        </view>
+        <view wantsLayer="YES" id="5AI-35-so3" userLabel="HipChat View Item View" customClass="EMCollectionViewItemView" customModule="EmojiMenuBar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="1" width="100" height="79"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Eyb-SL-XHN">
+                    <rect key="frame" x="0.0" y="10" width="100" height="69"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Wj3-nT-zCJ"/>
+                    <connections>
+                        <binding destination="9ch-xw-60B" name="value" keyPath="representedObject.image" id="rgZ-IP-jL8"/>
+                    </connections>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="RK5-ZR-ORH">
+                    <rect key="frame" x="-2" y="0.0" width="104" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="name" id="s3Y-1D-gIq">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.27572943239795922" green="0.27572943239795922" blue="0.27572943239795922" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="9ch-xw-60B" name="value" keyPath="representedObject.clipboardRepresentation" id="BLC-4c-e3C"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="71" y="261.5"/>
+        </view>
     </objects>
 </document>

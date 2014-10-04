@@ -10,11 +10,32 @@ import Cocoa
 
 class EMPopoverViewController: NSViewController, NSCollectionViewDelegate {
     
+    @IBOutlet weak var hipchatScrollView: NSScrollView!
+    @IBOutlet weak var emojiScrollView: NSScrollView!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+
+//    override func awakeFromNib() {}
     
-    override init() {
-        super.init()
+    func showHipchatTab() {
+        hipchatScrollView.hidden = false
+        emojiScrollView.hidden = true
+    }
+    
+    func showEmojiTab() {
+        hipchatScrollView.hidden = true
+        emojiScrollView.hidden = false
+    }
+    
+    @IBAction func controlClicked(sender: NSSegmentedControl) {
+        if (sender.isSelectedForSegment(0)) {
+            showHipchatTab()
+        } else {
+            showEmojiTab()
+        }
     }
 }
+
+

@@ -7,15 +7,15 @@
 //
 
 import Cocoa
+import Foundation
 
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     @IBOutlet var mainPopover: NSPopover!
     
-    var popoverViewController: EMPopoverViewController!
-    
     var statusItem: NSStatusItem?
     var hipchatEmoticons: NSArray
+    var emojis: NSArray
     var testImage: NSImage?
     
     var popoverTransiencyMonitor: NSEvent?
@@ -23,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     override init() {
         NSLog("AppDelegate init!")
         hipchatEmoticons = AppDelegate.buildHipchatEmoticons()
+        emojis = AppDelegate.buildEmojiModels()
         super.init()
     }
 
@@ -70,12 +71,28 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         if let resourcePath = NSBundle.mainBundle().resourcePath {
             let hipchatIconsPath = resourcePath.stringByAppendingPathComponent("hipchat-emoticons")
             var contents: [String] = NSFileManager.defaultManager().contentsOfDirectoryAtPath(hipchatIconsPath, error: nil) as [String]
-            //        NSLog("flattened: \(contents.map({ EMEmoticonModel.instanceOrNil($0) }).filter({ $0 != nil }).map({ $0! }))")
-            //        contents = contents[1...5]
             return contents.map({ EMEmoticonModel.instanceOrNil($0) }).filter({ $0 != nil }).map({ $0! })
         } else {
             return Array()
         }
+    }
+    
+    class func buildEmojiModels() -> NSArray {
+        var result: NSArray = NSArray()
+        if let resourcePath = NSBundle.mainBundle().resourcePath {
+            let emojiDotJson = resourcePath.stringByAppendingPathComponent("emoji.json")
+            NSLog("emojiDotJson \(emojiDotJson)")
+            let emojiString = String(contentsOfFile: emojiDotJson, encoding: NSUTF8StringEncoding, error: nil)
+            let emojiJson = JSON.parse(emojiString!)
+            NSLog("jsonObject: \(emojiJson)")
+            if let emojiArray = emojiJson.asArray {
+                result = emojiArray.map {
+                    (singleJson: JSON) -> EMEmojiModel in
+                    return EMEmojiModel(json: singleJson)
+                }
+            }
+        }
+        return result
     }
 }
 

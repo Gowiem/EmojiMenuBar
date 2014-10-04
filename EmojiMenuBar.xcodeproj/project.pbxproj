@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1FE9D519DCE246004A8100 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FE9D419DCE246004A8100 /* json.swift */; };
 		DB27869219D4FF0B00AE9A56 /* EMCollectionViewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27869119D4FF0B00AE9A56 /* EMCollectionViewItemView.swift */; };
+		DB33A86D19DB6ED40059BC7E /* EMEmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB33A86C19DB6ED40059BC7E /* EMEmojiModel.swift */; };
+		DB33A88919DB73920059BC7E /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = DB33A88819DB73920059BC7E /* emoji.json */; };
 		DB9314AD195624E50060B5FD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9314AC195624E50060B5FD /* main.swift */; };
 		DB9314AF195624E50060B5FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9314AE195624E50060B5FD /* AppDelegate.swift */; };
 		DB9314B1195624E50060B5FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9314B0195624E50060B5FD /* Images.xcassets */; };
@@ -207,7 +210,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB1FE9D419DCE246004A8100 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = json.swift; path = EmojiMenuBar/json.swift; sourceTree = "<group>"; };
 		DB27869119D4FF0B00AE9A56 /* EMCollectionViewItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMCollectionViewItemView.swift; sourceTree = "<group>"; };
+		DB33A86C19DB6ED40059BC7E /* EMEmojiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMEmojiModel.swift; sourceTree = "<group>"; };
+		DB33A88819DB73920059BC7E /* emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji.json; sourceTree = "<group>"; };
 		DB9314A7195624E50060B5FD /* EmojiMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9314AB195624E50060B5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB9314AC195624E50060B5FD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -421,6 +427,7 @@
 		DB93149E195624E50060B5FD = {
 			isa = PBXGroup;
 			children = (
+				DB1FE9D419DCE246004A8100 /* json.swift */,
 				DB9316321957922F0060B5FD /* hipchat-emoticons */,
 				DB9314A9195624E50060B5FD /* EmojiMenuBar */,
 				DB9314BC195624E50060B5FD /* EmojiMenuBarTests */,
@@ -446,10 +453,12 @@
 				DBF2769D1974D20C004EDA97 /* EMCollectionViewItem.swift */,
 				DB27869119D4FF0B00AE9A56 /* EMCollectionViewItemView.swift */,
 				DB9314D319578BFB0060B5FD /* EMEmoticonModel.swift */,
+				DB33A86C19DB6ED40059BC7E /* EMEmojiModel.swift */,
 				DB9316341957A7D50060B5FD /* EMUtils.swift */,
 				DB9314B2195624E50060B5FD /* MainMenu.xib */,
 				DB9314CB19562FC00060B5FD /* Icon.icns */,
 				DB9314B0195624E50060B5FD /* Images.xcassets */,
+				DB33A88819DB73920059BC7E /* emoji.json */,
 				DB9314D519578FF70060B5FD /* hipchat-emoticons */,
 				DB9314AA195624E50060B5FD /* Supporting Files */,
 			);
@@ -885,6 +894,7 @@
 				DB93162B19578FF80060B5FD /* wtf.png in Resources */,
 				DB9315E719578FF80060B5FD /* mike.png in Resources */,
 				DB93161E19578FF80060B5FD /* tree.png in Resources */,
+				DB33A88919DB73920059BC7E /* emoji.json in Resources */,
 				DB9315AD19578FF80060B5FD /* daenerys.png in Resources */,
 				DB9315B019578FF80060B5FD /* derp.png in Resources */,
 				DB9315F019578FF80060B5FD /* notsureifgusta.png in Resources */,
@@ -940,11 +950,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB9314D0195639FA0060B5FD /* EMPopoverViewController.swift in Sources */,
+				DB33A86D19DB6ED40059BC7E /* EMEmojiModel.swift in Sources */,
 				DB9314AF195624E50060B5FD /* AppDelegate.swift in Sources */,
 				DBF2769C1974CF3F004EDA97 /* EMCollectionView.swift in Sources */,
 				DB9314AD195624E50060B5FD /* main.swift in Sources */,
 				DB27869219D4FF0B00AE9A56 /* EMCollectionViewItemView.swift in Sources */,
 				DBF2769E1974D20C004EDA97 /* EMCollectionViewItem.swift in Sources */,
+				DB1FE9D519DCE246004A8100 /* json.swift in Sources */,
 				DB9316351957A7D50060B5FD /* EMUtils.swift in Sources */,
 				DB9314D419578BFB0060B5FD /* EMEmoticonModel.swift in Sources */,
 			);

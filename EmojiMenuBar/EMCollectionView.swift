@@ -12,11 +12,9 @@ class EMCollectionView : NSCollectionView {
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
-        NSLog("init with frame! content: \(self.content)")
     }
 
     required init(coder: NSCoder) {
-        NSLog("Inside collection view controller init w/ coder")
         super.init()
     }
     

@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../Cloned/json-swift/JSON.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:EmojiMenuBar.xcodeproj">
    </FileRef>
 </Workspace>
