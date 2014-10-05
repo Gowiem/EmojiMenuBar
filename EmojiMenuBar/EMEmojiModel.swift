@@ -8,17 +8,32 @@
 
 import Foundation
 
-class EMEmojiModel: NSObject {
+class EMEmojiModel: EMModel {
     
     let modelJson: JSON
-    let name: String
+    let emoji: String
+    let tags: NSArray
     
     init(json:JSON) {
+
         self.modelJson = json;
+        var name = "No Name"
         if let theName = json["aliases"][0].asString {
-            self.name = theName
-        } else {
-            self.name = "No Name?"
+            name = theName
         }
+        
+        if let theTags = json["tags"].asArray {
+            self.tags = theTags
+        } else {
+            self.tags = []
+        }
+        
+        if let theEmoji = json["emoji"].asString {
+            self.emoji = theEmoji
+        } else {
+            self.emoji = "None :("
+        }
+        
+        super.init(seperators: [":", ":"], name: name)
     }
 }

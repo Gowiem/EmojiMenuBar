@@ -16,7 +16,7 @@ class EMCollectionViewItemView : NSView {
             let subviews: NSArray = collectionView.subviews as NSArray
             let index = subviews.indexOfObject(self)
             let content: NSArray = collectionView.content as NSArray
-            let model: EMEmoticonModel = content.objectAtIndex(index) as EMEmoticonModel
+            let model: EMModel = content.objectAtIndex(index) as EMModel
             
             // Copy it to our user's clipboard
             model.copyToUsersClipboard()

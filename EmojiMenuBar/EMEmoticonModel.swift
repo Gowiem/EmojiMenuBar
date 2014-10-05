@@ -9,22 +9,22 @@
 import Foundation
 import SpriteKit
 
-class EMEmoticonModel: NSObject {
-    var name: String
+class EMEmoticonModel: EMModel {
+    
     var filename: String
     var fileExtension: String
     var image: NSImage?
     
-    
     init(filename: NSString) {
         let components: [String] = filename.componentsSeparatedByString(".") as [String]
-        self.name = components[0]
+        var name = components[0]
         self.filename = filename
         self.fileExtension = components[1]
         let path = NSBundle.mainBundle().pathForResource(name, ofType: fileExtension)
         if let newImage = NSImage(contentsOfFile: path!) {
             self.image = newImage
         }
+        super.init(seperators: ["(", ")"], name: name)
     }
     
     class func instanceOrNil(filename: NSString) -> EMEmoticonModel? {
@@ -34,17 +34,6 @@ class EMEmoticonModel: NSObject {
             //NSLog("Skipping filename: \(filename)")
             return nil
         }
-    }
-    
-    func clipboardRepresentation() -> String {
-        return "(\(self.name))"
-    }
-    
-    // Add the model's name to the clipboard
-    func copyToUsersClipboard() {
-        let pasteBoard = NSPasteboard.generalPasteboard()
-        pasteBoard.clearContents()
-        pasteBoard.setString(self.clipboardRepresentation(), forType: NSStringPboardType)
     }
     
     func description() -> String {
